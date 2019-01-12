@@ -8,6 +8,8 @@ exports.createPost = (req, res, next) => {
         creator: req.userData.userId
     });
 
+    console.log("storing images...: " + post.imagePath +" | " +post.creator);
+
     post.save()
         .then(createdPost => {
             res.status(201).json({

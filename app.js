@@ -24,7 +24,7 @@ app.use(bodyParser.json());
 // unused in app
 app.use(bodyParser.urlencoded({extended: false}));
 // make images folder accessible - __dirname is optional
-app.use("/images", express.static(path.join(__dirname, "images")));
+app.use("/images", express.static(path.join("images")));
 
 app.use((req, res, next) =>{
     // CROSS: Allow access from all domains
