@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -51,5 +53,6 @@ function getDbConnection() {
         );
         return process.env.MONGO_DB_ADDRESS_DEV;
     }
+    console.log('running DB... : production.');
     return process.env.MONGO_DB_ADDRESS_PROD;
 }
